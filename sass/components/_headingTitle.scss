@@ -1,0 +1,38 @@
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    /* Used to stabilize the animation */
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+
+    .heading-Title {
+        display: block;
+        font-size: 60px;
+        font-weight: 400;
+        letter-spacing: 35px;
+        animation-name: AnimateTitleLeft;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+        
+        @include responsive (phone) {
+            letter-spacing: 1rem;
+            font-family: 5rem;
+        }
+    }
+    
+    .heading-subTitle {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+        animation-name: AnimateSubTitleRight;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+        /* A Shorthand for all the trhee porperties above is:
+        animation: AnimateSubTitleRight 2s ease-out; */
+
+        @include responsive (phone) {
+            letter-spacing: .5rem;
+        }
+    }
+}
